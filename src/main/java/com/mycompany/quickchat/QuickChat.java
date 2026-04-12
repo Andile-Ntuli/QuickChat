@@ -180,3 +180,8 @@ public class QuickChat {
         input.close(); 
     }
 }
+ 
+// JUnit testing is basically a way of checking whether your Java code actually  works the way you
+// epected it to, without ahaving to the whole program everytime.Instead of typing inputsand guessing if
+// your methods behave correctly, you write small automated tests that call your methods amd compare the actual
+// results to the  result you expecte.

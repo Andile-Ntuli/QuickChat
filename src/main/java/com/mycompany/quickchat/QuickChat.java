@@ -4,7 +4,7 @@
 
 package com.mycompany.quickchat;
 
-import java.util.Scanner; 
+import java.util.Scanner;
 
 class Login{
     
@@ -25,7 +25,7 @@ class Login{
 }
 
 // Username must have underascore and be 5 chars or less
-public boolean checkUserName(){ 
+public boolean checkUserName(){
     if(storedUsername.contains("_") && storedUsername.length() <= 5){
         System.out.println("Username successfully captured.");
         return true;

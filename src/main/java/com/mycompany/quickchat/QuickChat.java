@@ -1,4 +1,4 @@
-/*
+/*g
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
@@ -116,72 +116,70 @@ public String returnLoginStatus(boolean loginSuccess){
  */
 public class QuickChat {
     
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         
-        Scanner input = new Scanner(System.in);
-        
-        System.out.println("===== CREATE ACCOUNT =====");
-        
-        System.out.println("Enter First Name: ");
-        String fName = input.nextLine();
-        
-        System.out.println("Enter Last Name: ");
-        String lName = input.nextLine();
-        
-        System.out.println("Enter Username: ");
-        String username = input.nextLine();
-        
-        System.out.println("Enter Password: ");
-        String password = input.nextLine();
-        
-        System.out.println("Enter Cell Number(with international code): ");
-        String cellNumber = input.nextLine();
-        
-        // Store everything in ONE login object
-        Login app = new Login(fName, lName, username, password, cellNumber);
-        
-        int choice;
-        
-        do{
-            System.out.println("\n===== QUICKCHAT MENU =====");
-            System.out.println("1. Register User");
-            System.out.println("2. Login");
-            System.out.println("3. Exit");
-            
-             System.out.println("Choose option");
-             choice = input.nextInt();
-             input.nextLine();//clear leftover newline
-             
-             switch(choice){
-                 case 1:
-                      System.out.println(app.registerUser());
-                      break;
-                      
-                 case 2:
-                      System.out.println("Enter Username: ");
-                      String u = input.nextLine();
-                      
-                       System.out.println("Enter Password: ");
-                       String p = input.nextLine();
-                       
-                       boolean success = app.loginUser(u, p);
-                       break;
-                       
-                 case 3:
-                     System.out.println("Goodbye!");
-                     break;
-                     
-                 default:
-                     System.out.println("Invalid option.");
-                       
-             }
-        }while ( choice != 3);
-        
-        input.close(); 
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("===== CREATE ACCOUNT =====");
+
+    System.out.println("Enter First Name: ");
+    String fName = input.nextLine();
+
+    System.out.println("Enter Last Name: ");
+    String lName = input.nextLine();
+
+    System.out.println("Enter Username: ");
+    String username = input.nextLine();
+
+    System.out.println("Enter Password: ");
+    String password = input.nextLine();
+
+    System.out.println("Enter Cell Number(with international code): ");
+    String cellNumber = input.nextLine();
+
+    // Store everything in ONE login object
+    Login app = new Login(fName, lName, username, password, cellNumber);
+
+    int choice = 0;
+
+    while(choice != 3){
+
+        System.out.println("\n===== QUICKCHAT MENU =====");
+        System.out.println("1. Register User");
+        System.out.println("2. Login");
+        System.out.println("3. Exit");
+
+        System.out.println("Choose option");
+        choice = input.nextInt();
+        input.nextLine(); // clear leftover newline
+
+        if(choice == 1){
+            System.out.println(app.registerUser());
+        }
+        else if(choice == 2){
+            System.out.println("Enter Username: ");
+            String u = input.nextLine();
+
+            System.out.println("Enter Password: ");
+            String p = input.nextLine();
+
+            boolean success = app.loginUser(u, p);
+            System.out.println(app.returnLoginStatus(success));
+        }
+        else if(choice == 3){
+            System.out.println("Goodbye!");
+        }
+        else{
+            System.out.println("Invalid option.");
+        }
     }
-}
+
+    input.close();
+} // end main
+} // end class
+
  
 // JUnit testing is basically a way of checking whether your Java code actually  works the way you
-// epected it to, without ahaving to the whole program everytime.Instead of typing inputsand guessing if
-// your methods behave correctly, you write small automated tests that call your methods amd compare the actual
+// expected it to, without having to test the whole program everytime.Instead of typing inputs and guessing if
+// your methods behaves correctly, you write small automated tests that call your methods and compare the actual
 // results to the  result you expecte.

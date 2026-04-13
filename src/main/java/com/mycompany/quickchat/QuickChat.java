@@ -25,7 +25,7 @@ class Login{
 }
 
 // Username must have underascore and be 5 chars or less
-public boolean checkUserName(){    
+public boolean checkUserName(){ 
     if(storedUsername.contains("_") && storedUsername.length() <= 5){
         System.out.println("Username successfully captured.");
         return true;
@@ -37,7 +37,7 @@ public boolean checkUserName(){
 }
 
 // Process complexity check(simplified, student-style)
-public boolean checkPasswordComplexity(){
+public boolean checkPasswordComplexity(){ 
     
     boolean longEnough = storedPassword.length() >= 8;
     

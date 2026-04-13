@@ -1,4 +1,4 @@
-/*g
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
@@ -6,7 +6,7 @@ package com.mycompany.quickchat;
 
 import java.util.Scanner; 
 
-class Login{
+class Login{ 
     
     String fName;
     String lName;
@@ -182,4 +182,4 @@ public class QuickChat {
 // JUnit testing is basically a way of checking whether your Java code actually  works the way you
 // expected it to, without having to test the whole program everytime.Instead of typing inputs and guessing if
 // your methods behaves correctly, you write small automated tests that call your methods and compare the actual
-// results to the  result you expecte.
+// results to the  result you expectetg.

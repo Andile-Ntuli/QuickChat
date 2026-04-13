@@ -80,7 +80,7 @@ public boolean checkCellPhoneNumber(){
 }
 
 // Registration message
-public String registerUser(){
+public String registerUser(){ 
     
     if(!checkUserName()){
         return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than 5 characters in length.";      

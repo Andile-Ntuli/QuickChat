@@ -37,7 +37,7 @@ public boolean checkUserName(){
 }
 
 // Process complexity check(simplified, student-style)
-public boolean checkPasswordComplexity(){ 
+public boolean checkPasswordComplexity(){
     
     boolean longEnough = storedPassword.length() >= 8;
     
@@ -68,7 +68,7 @@ return false;
 }
 
 // Cell number must start with + and be correct length
-public boolean checkCellPhoneNumber(){ 
+public boolean checkCellPhoneNumber(){
     
     if(storedCellNumber.startsWith("+") && storedCellNumber.length() <= 12){
         System.out.println("Cell number successfully captured.");

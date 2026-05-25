@@ -8,7 +8,7 @@ package com.mycompany.quickchat;
  *
  * @author junio
  */
-public class Message { 
+public class Message {
     String messageID;
     String recipient;
     String messageText;
@@ -28,7 +28,7 @@ public class Message {
                "\nTotal Sent: " + numSent;
     }
 
-    public String sendMessage() {
+    public String sendMessage() { 
         if(messageText.length() > 250) {
             return "Message too long!";
         }

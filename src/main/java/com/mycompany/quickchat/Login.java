@@ -44,7 +44,7 @@ public class Login {
         return username.contains("_") && username.length() <= 5;
     }
 
-    public boolean checkPasswordComplexity(String password) { 
+    public boolean checkPasswordComplexity(String password) {
         boolean longEnough = password.length() >= 8;
         boolean hasCapital = password.matches(".*[A-Z].*");
         boolean hasNumber = password.matches(".*[0-9].*");
@@ -52,7 +52,7 @@ public class Login {
         return longEnough && hasCapital && hasNumber && hasSpecial;
     }
 
-    public boolean checkCellPhoneNumber(String cell) {
+    public boolean checkCellPhoneNumber(String cell) { 
         return cell.startsWith("+27") && cell.length() >= 11;
     }
 

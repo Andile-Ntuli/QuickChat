@@ -40,11 +40,11 @@ public class Login {
     }
 
     // Validation helpers
-    public boolean checkUserName(String username) { 
+    public boolean checkUserName(String username) {
         return username.contains("_") && username.length() <= 5;
     }
 
-    public boolean checkPasswordComplexity(String password) {
+    public boolean checkPasswordComplexity(String password) { 
         boolean longEnough = password.length() >= 8;
         boolean hasCapital = password.matches(".*[A-Z].*");
         boolean hasNumber = password.matches(".*[0-9].*");

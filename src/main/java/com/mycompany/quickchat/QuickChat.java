@@ -4,11 +4,11 @@
 
 package com.mycompany.quickchat;
 
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public class QuickChat {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
 
         Scanner input = new Scanner(System.in);
         Login app = new Login();

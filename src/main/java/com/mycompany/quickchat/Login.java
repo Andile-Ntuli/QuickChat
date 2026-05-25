@@ -40,7 +40,7 @@ public class Login {
     }
 
     // Validation helpers
-    public boolean checkUserName(String username) {
+    public boolean checkUserName(String username) { 
         return username.contains("_") && username.length() <= 5;
     }
 

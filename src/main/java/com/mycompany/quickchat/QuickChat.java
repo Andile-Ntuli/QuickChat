@@ -4,9 +4,9 @@
 
 package com.mycompany.quickchat;
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
-public class QuickChat { 
+public class QuickChat {
 
     public static void main(String[] args) {
 

@@ -8,7 +8,7 @@ package com.mycompany.quickchat;
  *
  * @author junio
  */
-public class Message {
+public class Message { 
     String messageID;
     String recipient;
     String messageText;

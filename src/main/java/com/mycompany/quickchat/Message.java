@@ -21,14 +21,14 @@ public class Message {
         this.numSent = num;
     }
 
-    public String display() {
+    public String display() { 
         return "Message ID: " + messageID +
                "\nRecipient: " + recipient +
                "\nMessage: " + messageText +
                "\nTotal Sent: " + numSent;
     }
 
-    public String sendMessage() { 
+    public String sendMessage() {
         if(messageText.length() > 250) {
             return "Message too long!";
         }

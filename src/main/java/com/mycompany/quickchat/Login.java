@@ -16,7 +16,7 @@ public class Login {
     private String firstName;
     private String lastName;
 
-    public Login() {}
+    public Login() {} 
 
     // Register user
     public String registerUser(String fName, String lName, String username, String password, String cell) {

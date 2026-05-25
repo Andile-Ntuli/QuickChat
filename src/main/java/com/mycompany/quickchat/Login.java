@@ -9,7 +9,7 @@ package com.mycompany.quickchat;
  * @author junio
  */
 
-public class Login {
+public class Login { 
     private String storedUsername;
     private String storedPassword;
     private String storedCell;

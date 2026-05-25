@@ -21,7 +21,7 @@ public class Message {
         this.numSent = num;
     }
 
-    public String display() { 
+    public String display() {
         return "Message ID: " + messageID +
                "\nRecipient: " + recipient +
                "\nMessage: " + messageText +

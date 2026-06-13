@@ -9,8 +9,9 @@ package com.mycompany.quickchat;
  * @author junio
  */
 
-public class Login { 
-    private String storedUsername;
+public class Login {
+
+     private String storedUsername;
     private String storedPassword;
     private String storedCell;
     private String firstName;
@@ -18,7 +19,7 @@ public class Login {
 
     public Login() {} 
 
-    // Register user
+    // Register user with basic checks
     public String registerUser(String fName, String lName, String username, String password, String cell) {
         this.firstName = fName;
         this.lastName = lName;
@@ -26,20 +27,19 @@ public class Login {
         this.storedPassword = password;
         this.storedCell = cell;
 
-        // basic validation
         if(!checkUserName(username)) {
-            return "Username is not correctly formatted; please ensure it contains an underscore and is no more than 5 characters.";
+            return "Oops! Username must have an underscore and be max 5 chars.";
         }
         if(!checkPasswordComplexity(password)) {
-            return "Password is not correctly formatted; must be 8+ chars, contain a capital, number, and special character.";
+            return "Password too weak. Needs 8+ chars, a capital, number, and special symbol.";
         }
         if(!checkCellPhoneNumber(cell)) {
-            return "Cell number incorrectly formatted; must start with +27 and be at least 11 characters.";
+            return "Cell number wrong format. Must start with +27 and be at least 11 digits.";
         }
         return "User registered successfully.";
     }
 
-    // Validation helpers
+    // Simple checks
     public boolean checkUserName(String username) {
         return username.contains("_") && username.length() <= 5;
     }
@@ -61,8 +61,13 @@ public class Login {
         return username.equals(storedUsername) && password.equals(storedPassword);
     }
 
-    // Welcome message
-    public String returnLoginStatus() {
-        return "Welcome " + firstName + " " + lastName + ", it is great to see you again.";
+    // Friendly welcome message
+    public String returnLoginStatus(boolean loggedIn) {
+        if(loggedIn) {
+            return "Welcome " + firstName + " " + lastName + "! You’re logged in.\n" +
+                   "Now you can use QuickChat features (Send, Store, Disregard, Reports).";
+        } else {
+            return "Login failed. Try again.";
+        }
     }
 }

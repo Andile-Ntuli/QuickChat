@@ -5,7 +5,7 @@
 package com.mycompany.quickchat;
 
 import java.util.Scanner;
-import org.json.simple.JSONArray;
+import org.json.simple.JSONArray; 
 
 public class QuickChat {
 

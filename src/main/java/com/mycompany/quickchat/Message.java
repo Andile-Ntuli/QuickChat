@@ -148,7 +148,7 @@ public class Message {
     }
 
     // Report of all stored + sent messages
-    public static void showReport() { 
+    public static void showReport() {
         System.out.println("=== Messages Report ===");
         for (Object o : stored) {
             JSONObject m = (JSONObject) o;
@@ -163,7 +163,7 @@ public class Message {
     }
 
     // Reset method for unit tests
-    public static void reset() {
+    public static void reset() { 
         sent.clear();
         stored.clear();
         disregarded.clear();

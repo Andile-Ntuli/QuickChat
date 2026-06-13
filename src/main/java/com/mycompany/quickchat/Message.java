@@ -97,7 +97,7 @@ public class Message {
     }
 
     // Search by ID across both sent and stored
-    public static String findByID(String id) { 
+    public static String findByID(String id) {
         for (Object o : stored) {
             JSONObject m = (JSONObject) o;
             if (id.equals(m.get("id"))) {
@@ -114,7 +114,7 @@ public class Message {
     }
 
     // Search by recipient across both sent and stored
-    public static JSONArray findByRecipient(String recipient) {
+    public static JSONArray findByRecipient(String recipient) { 
         JSONArray results = new JSONArray();
         for (Object o : stored) {
             JSONObject m = (JSONObject) o;

@@ -114,7 +114,7 @@ public class Message {
     }
 
     // Search by recipient across both sent and stored
-    public static JSONArray findByRecipient(String recipient) { 
+    public static JSONArray findByRecipient(String recipient) {
         JSONArray results = new JSONArray();
         for (Object o : stored) {
             JSONObject m = (JSONObject) o;
@@ -135,7 +135,7 @@ public class Message {
     }
 
     // Delete by hash (only makes sense for stored)
-    public static String deleteByHash(String hash) {
+    public static String deleteByHash(String hash) { 
         for (int i = 0; i < stored.size(); i++) {
             JSONObject m = (JSONObject) stored.get(i);
             if (hash.equals(m.get("hash"))) {

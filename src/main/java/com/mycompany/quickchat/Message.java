@@ -14,7 +14,7 @@ public class Message {
     private String id;
     private String recipient;
     private String text;
-    private String hash; 
+    private String hash;
 
     // JSON arrays
     private static JSONArray sent = new JSONArray();
@@ -24,7 +24,7 @@ public class Message {
     private static JSONArray ids = new JSONArray();
 
     // Maximums
-    private static final int MAX_MESSAGES = 100;
+    private static final int MAX_MESSAGES = 100; 
 
     public Message(String id, String recipient, String text) {
         this.id = id;

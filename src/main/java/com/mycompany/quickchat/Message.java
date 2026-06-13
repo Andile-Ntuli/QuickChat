@@ -135,7 +135,7 @@ public class Message {
     }
 
     // Delete by hash (only makes sense for stored)
-    public static String deleteByHash(String hash) { 
+    public static String deleteByHash(String hash) {
         for (int i = 0; i < stored.size(); i++) {
             JSONObject m = (JSONObject) stored.get(i);
             if (hash.equals(m.get("hash"))) {
@@ -148,7 +148,7 @@ public class Message {
     }
 
     // Report of all stored + sent messages
-    public static void showReport() {
+    public static void showReport() { 
         System.out.println("=== Messages Report ===");
         for (Object o : stored) {
             JSONObject m = (JSONObject) o;

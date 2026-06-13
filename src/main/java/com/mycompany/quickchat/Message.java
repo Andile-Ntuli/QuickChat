@@ -11,8 +11,8 @@ import org.json.simple.JSONObject;
 
 public class Message {
 
-    private String id; 
-    private String recipient;
+    private String id;
+    private String recipient; 
     private String text;
     private String hash;
 

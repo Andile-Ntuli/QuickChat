@@ -6,12 +6,12 @@
 // Message handles sending, storing, searching, deleting
 package com.mycompany.quickchat;
 
-import org.json.simple.JSONArray; 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class Message {
 
-    private String id;
+    private String id; 
     private String recipient;
     private String text;
     private String hash;

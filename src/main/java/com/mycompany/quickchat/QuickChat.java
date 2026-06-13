@@ -31,7 +31,7 @@ public class QuickChat {
             System.out.println(login.returnLoginStatus(true));
             int choice;
             do {
-                System.out.println("\nMain Menu → 1) Send Message  2) Stored Messages  3) Quit"); 
+                System.out.println("\nMain Menu → 1) Send Message  2) Stored Messages  3) Quit");
                 choice = sc.nextInt();
                 sc.nextLine(); // consume newline
 

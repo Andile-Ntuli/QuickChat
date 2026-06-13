@@ -13,8 +13,8 @@ public class Message {
 
     private String id;
     private String recipient;
-    private String text; 
-    private String hash;
+    private String text;
+    private String hash; 
 
     // JSON arrays
     private static JSONArray sent = new JSONArray();
